@@ -1,0 +1,116 @@
+.node{
+	/* The parent html should not accept pointer events, this must be handled by the JointJS model */
+	pointer-events: none;
+	border: none;
+	color: #cccccc;
+	padding: 0pt;
+	margin: 0pt;
+	border-radius: 8pt;
+	position: absolute;
+	visibility: hidden;
+}
+.node * {
+	/* The parent html does not accept pointer events so they must be restored in the children */
+	pointer-events: auto;
+	opacity: 1;
+	visibility: visible;
+}
+.nodeEdge{
+	/* The parent html should not accept pointer events, this must be handled by the JointJS model */
+	pointer-events: none;
+	height: 100%;
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+}
+.nodeEdge * {
+	/* The parent html does not accept pointer events so they must be restored in the children */
+	pointer-events: auto;	
+}
+
+.nodeContent{
+	position: absolute;
+	padding: 3pt;
+	top: 8pt;
+	left: -8pt;
+	color: #444444;
+	background-color:#ffffff;
+	border-radius: 3pt;
+	border: 1pt solid #888888;
+}
+.nodeContent *{
+	white-space: nowrap;
+}
+
+.node .nodeDelete{
+	border: none;
+	border-radius: 8pt;
+	padding: 0pt;
+	margin: 0pt;
+	background-color: #cccccc;
+	color: #444444;
+	width: 16pt;
+	height: 16pt;
+	text-align: middle;
+	position: absolute;
+	top: -8pt;
+	left: -8pt;
+	font-weight: bold;
+	cursor: pointer;
+	opacity: 1;
+}
+.node .nodeDelete:hover {
+	color: #ff4444;
+}
+
+.node .nodeShowHide{
+	border: none;
+	border-radius: 8pt;
+	padding: 0pt;
+	margin: 0pt;
+	background-color: #cccccc;
+	color: #444444;
+	width: 16pt;
+	height: 16pt;
+	text-align: middle;
+	position: absolute;
+	top: -8pt;
+	left: 8pt;
+	font-weight: bold;
+	cursor: pointer;
+	opacity: 1;
+}
+.node .nodeShowHide:hover {
+	color: #ffff44;
+}	
+
+.node .nodeDescription{
+	width: 100%;
+	pointer-events: none;
+	border: none;
+	padding: 8pt;
+	color: #cccccc;
+	display: table-cell;
+	opacity: 1;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: .75em;
+	vertical-align: middle;
+	text-align: center;
+	border-radius: 8pt;
+}	
+
+.node .nodeHighlight.nodeHighlight{
+	background-color: #ff4444;
+	color: #444444;
+}
+
+.node .nodeDescription:hover{
+	text-overflow: visible;
+	overflow: visible;
+}	
+
+.nodeTitle{
+	cursor: text;	
+	/*padding: 3pt;*/
+}
